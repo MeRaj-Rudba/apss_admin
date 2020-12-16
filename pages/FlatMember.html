@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" maximum-scale=1.0">
+    <title>Flat Members</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lykmapipo/themify-icons@0.1.2/css/themify-icons.css">
+    <link rel="stylesheet" href="/styles.css">
+</head>
+
+<body>
+    <input type="checkbox" id="sidebar-toggle">
+    <div class="sidebar">
+        <div class="sidebar-header">
+            <h3 class="brand">
+                <span class="ti-menu-unlink"></span>
+                <span>Admin Panel</span>
+            </h3>
+            <label for="sidebar-toggle" class="ti-menu-alt"></label>
+        </div>
+        <div class="sidebar-menu">
+            <ul>
+
+                <!--Dashboard Menu Items-->
+
+                <li>
+                    <a id="flat-owners-btn" href="/index.html">
+                        <!--Dashboard Menu Link Should be here-->
+                        <span class="ti-home"></span>
+                        <span>Flat Owners</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a id="flat-members-btn" href="/pages/FlatMember.html">
+                        <!--Dashboard Menu Link Should be here-->
+                        <span class="ti-face-smile"></span>
+                        <span>Flat Members</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a id="staffs-btn" href="/pages/Staffs.html">
+                        <!--Dashboard Menu Link Should be here-->
+                        <span class="ti-clipboard"></span>
+                        <span>Staffs</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a id="servants-btn" href="/pages/Servants.html">
+                        <!--Dashboard Menu Link Should be here-->
+                        <span class="ti-hummer"></span>
+                        <span>Servants</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a id="notices-btn" href="/pages/Notices.html">
+                        <!--Dashboard Menu Link Should be here-->
+                        <span class="ti-calendar"></span>
+                        <span>Notices</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a id="service-charges-btn" href="/pages/ServiceCharge.html">
+                        <!--Dashboard Menu Link Should be here-->
+                        <span class="ti-money"></span>
+                        <span>Service Charges</span>
+                    </a>
+                </li>
+                <li>
+                    <a id="entry-exit-log-btn" href="/pages/EntryExitLog.html">
+                        <!--Dashboard Menu Link Should be here-->
+                        <span class="ti-settings"></span>
+                        <span>Entry/Exit Logs</span>
+                    </a>
+                </li>
+
+            </ul>
+
+        </div>
+
+
+    </div>
+    <!--This is Dashboard Header-->
+    <div class="main-content">
+        <header>
+            <div class="search-wrapper">
+                <span class="ti-search"></span>
+                <input type="search" placeholder="Search">
+            </div>
+            <div class="social-icons">
+                <span class="ti-bell"></span>
+                <span class="ti-comment"></span>
+                <div></div>
+            </div>
+
+        </header>
+        <!--The main contents starts here-->
+        <main>
+
+            <!--Flat Members Menu-->
+            <div class="flat-members" id="flat-members">
+                <h2>Overview Of Flat Members</h2>
+
+
+                <section class="recent">
+                    <div class="activity-grid">
+                        <div class="activity-card">
+                            <h3>Flat Members</h3>
+                            <div class="table-responsive">
+                                <!--The overview table is here-->
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th>Name</th>
+                                            <th>Relation</th>
+                                            <th>Flat No</th>
+                                            
+                                        </tr>
+                                    </thead>
+                                    <tbody id="flat-member-tbody">
+                                        
+                                        
+
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="summary">
+                            <div class="summary-card">
+                                <div class="summary-single">
+                                    <span class="ti-id-badge">
+
+                                    </span>
+                                    <div>
+                                        <h5>26</h5>
+                                        <small>Number of flats</small>
+                                    </div>
+                                </div>
+                                <div class="summary-single">
+                                    <span class="ti-calendar">
+
+                                    </span>
+                                    <div>
+                                        <h5>16</h5>
+                                        <small>Number of Empty Flat</small>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="bday-card">
+                                <div class="bday-flex">
+                                    <div class="bday-img"></div>
+                                    <div class="bday-info">
+                                        <h5>Mr.Chandler Bing</h5>
+                                        <small>Birthday Today</small>
+                                    </div>
+                                </div>
+                                <div class="text-center ">
+                                    <button>
+                                        <span class="ti-gift"></span>
+                                        Wish Birthday
+                                    </button>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </section>
+                <section class="recent">
+                    <div class="activity-grid">
+                        <div class="activity-card">
+                            <h3><span class="ti-pencil-alt"> </span> Customize</h3>
+
+                            <div class="crud-section">
+
+                                <div class="crud-choice">
+                                    <input onchange="radioCheckForOwner()" type="radio" id="insert"
+                                        name="crud-choice-of-flat-owner" value="insert" checked="checked">
+                                    <label for="male">Insert</label><br>
+                                    <input onchange="radioCheckForOwner()" type="radio" id="update"
+                                        name="crud-choice-of-flat-owner" value="update">
+                                    <label for="female">Update</label><br>
+                                    <input onchange="radioCheckForOwner()" type="radio" id="delete"
+                                        name="crud-choice-of-flat-owner" value="delete">
+                                    <label for="other">Delete</label>
+                                </div>
+
+
+                                <div class="insert-operation" id="insert-operation">
+                                    <h3><span class="ti-import"> </span> Insert Operation</h3>
+                                    <form>
+                                        <div class="input-section-group">
+                                            <label for="">Input one</label>
+                                            <input type="text" name="" id="" placeholder="Something">
+                                        </div>
+                                        <div class="input-section-group">
+                                            <label for="">Input one</label>
+                                            <input type="text" name="" id="" placeholder="Something">
+                                        </div>
+                                        <div class="input-section-group">
+                                            <label for="">Input one</label>
+                                            <input type="text" name="" id="" placeholder="Something">
+                                        </div>
+                                        <div class="input-section-group">
+                                            <label for="">Input one</label>
+                                            <input type="text" name="" id="" placeholder="Something">
+                                        </div>
+                                        <div class="input-section-group">
+                                            <label for="">Input one</label>
+                                            <input type="text" name="" id="" placeholder="Something">
+                                        </div>
+                                        <br>
+                                        <div class="input-section-group">
+                                            <span></span>
+                                            <button class="theme-btn">Insert</button>
+                                        </div>
+
+                                    </form>
+                                </div>
+
+                                <div class="update-operation" id="update-operation" style="display: none;">
+                                    <h3><span class="ti-reload"> </span>Update Operation</h3>
+                                    <form>
+                                        <div class="input-section-group">
+                                            <label for="">Input one</label>
+                                            <input type="text" name="" id="" placeholder="Something">
+                                        </div>
+                                        <div class="input-section-group">
+                                            <label for="">Input one</label>
+                                            <input type="text" name="" id="" placeholder="Something">
+                                        </div>
+                                        <div class="input-section-group">
+                                            <label for="">Input one</label>
+                                            <input type="text" name="" id="" placeholder="Something">
+                                        </div>
+                                        <div class="input-section-group">
+                                            <label for="">Input one</label>
+                                            <input type="text" name="" id="" placeholder="Something">
+                                        </div>
+                                        <div class="input-section-group">
+                                            <label for="">Input one</label>
+                                            <input type="text" name="" id="" placeholder="Something">
+                                        </div>
+                                        <br>
+                                        <div class="input-section-group">
+                                            <span></span>
+                                            <button class="theme-btn">Update</button>
+                                        </div>
+                                    </form>
+                                </div>
+
+                                <div class="delete-operation" id="delete-operation" style="display: none;">
+                                    <h3><span class="ti-trash"> </span>Delete Operation</h3>
+                                    <form>
+                                        <div class="input-section-group">
+                                            <label for="">Input one</label>
+                                            <input type="text" name="" id="" placeholder="Something">
+                                        </div>
+                                        <div class="input-section-group">
+                                            <label for="">Input one</label>
+                                            <input type="text" name="" id="" placeholder="Something">
+                                        </div>
+                                        <div class="input-section-group">
+                                            <label for="">Input one</label>
+                                            <input type="text" name="" id="" placeholder="Something">
+                                        </div>
+                                        <div class="input-section-group">
+                                            <label for="">Input one</label>
+                                            <input type="text" name="" id="" placeholder="Something">
+                                        </div>
+                                        <div class="input-section-group">
+                                            <label for="">Input one</label>
+                                            <input type="text" name="" id="" placeholder="Something">
+                                        </div>
+                                        <br>
+                                        <div class="input-section-group">
+                                            <span></span>
+                                            <button class="theme-btn">Delete</button>
+                                        </div>
+                                    </form>
+                                </div>
+
+
+
+                            </div>
+                        </div>
+
+                    </div>
+
+                </section>
+            </div>
+
+
+            <!--Flat Members Menu-->
+
+            <!--Staffs Menu-->
+            <!--Servants Menu-->
+            <!--Notices Menu-->
+            <!--Service Charges Menu-->
+            <!--Entry/exit Logs Menu-->
+
+
+
+        </main>
+
+
+    </div>
+    <!--JavaScripts-->
+    <script>
+        const radioCheckForOwner = () => {
+            if (document.getElementById('insert').checked) {
+                document.getElementById('insert-operation').style.display = "block";
+                document.getElementById('update-operation').style.display = "none";
+                document.getElementById('delete-operation').style.display = "none";
+            }
+            else if (document.getElementById('update').checked) {
+                document.getElementById('insert-operation').style.display = "none";
+                document.getElementById('update-operation').style.display = "block";
+                document.getElementById('delete-operation').style.display = "none";
+            }
+            else if (document.getElementById('delete').checked) {
+                document.getElementById('insert-operation').style.display = "none";
+                document.getElementById('update-operation').style.display = "none";
+                document.getElementById('delete-operation').style.display = "block";
+            }
+        }
+    </script>
+    <script src="../dataView.js"></script>
+</body>
+
+
+</html>
